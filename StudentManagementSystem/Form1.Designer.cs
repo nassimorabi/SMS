@@ -36,6 +36,7 @@
             textBoxEmail = new TextBox();
             button1 = new Button();
             label4 = new Label();
+            labelAddedInformation = new Label();
             SuspendLayout();
             // 
             // label1
@@ -88,7 +89,7 @@
             // 
             button1.Location = new Point(260, 301);
             button1.Name = "button1";
-            button1.Size = new Size(157, 45);
+            button1.Size = new Size(171, 45);
             button1.TabIndex = 6;
             button1.Text = "Submit";
             button1.UseVisualStyleBackColor = true;
@@ -103,12 +104,22 @@
             label4.TabIndex = 11;
             label4.Text = "Name:";
             // 
+            // labelAddedInformation
+            // 
+            labelAddedInformation.AutoSize = true;
+            labelAddedInformation.Location = new Point(260, 239);
+            labelAddedInformation.Name = "labelAddedInformation";
+            labelAddedInformation.Size = new Size(171, 25);
+            labelAddedInformation.TabIndex = 12;
+            labelAddedInformation.Text = "Added Information";
+            // 
             // Form1
             // 
             AcceptButton = button1;
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(652, 429);
+            Controls.Add(labelAddedInformation);
             Controls.Add(label4);
             Controls.Add(button1);
             Controls.Add(textBoxEmail);
@@ -134,5 +145,6 @@
         private TextBox textBoxEmail;
         private Button button1;
         private Label label4;
+        private Label labelAddedInformation;
     }
 }

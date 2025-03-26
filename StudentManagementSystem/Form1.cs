@@ -12,7 +12,7 @@ namespace StudentManagementSystem
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            createStudent(1, "Test", "test@test.com");
+            //createStudent(1, "Test", "test@test.com");
 
         }
 
@@ -26,16 +26,21 @@ namespace StudentManagementSystem
 
         private void createStudent(int id, string name, string email)
         {
-            var student = new Student
+            var student = new Student // create variables || 
             {
                 StudentId = id,
                 StudentName = name,
-                StudentEmail = email
+                StudentEmail = email,
+                DateAdded = DateTime.Now,
+                AddedBy = "Admin"
             };
 
             textBoxId.Text = student.StudentId.ToString();
             textBoxName.Text = student.StudentName;
             textBoxEmail.Text = student.StudentEmail;
+
+            //labelAddedInformation.Text = "Added by: " + student.AddedBy + " " + student.DateAdded;
+            labelAddedInformation.Text = $"Added by: {student.AddedBy} {student.DateAdded}"; //proper outputting
 
         }
 
