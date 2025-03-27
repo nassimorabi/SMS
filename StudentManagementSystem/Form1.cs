@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using SMS.Domain;
+using SMS.Infrastructure.Data;
 
 namespace StudentManagementSystem
 {
@@ -11,9 +13,15 @@ namespace StudentManagementSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            using (var dbContext = new AppDbContext())
+            {
+                var program = dbContext.Programs.FirstOrDefault(); // creates a variable to fetch the first data in database
+                createProgram(program.ProgramId, program.ProgramName, program.Description);
+            }
 
+            //var program = dbContext.Programs.Where(p => p.ProgramName == "EE") || creates a variable to fetch a searched data
+            
             //createStudent(1, "Test", "test@test.com");
-
         }
 
         
@@ -21,7 +29,6 @@ namespace StudentManagementSystem
         {
 
             createStudent(2, "Don Pollo", "lingangguli@guliwacha.com");
-
         }
 
         private void createStudent(int id, string name, string email)
@@ -44,6 +51,24 @@ namespace StudentManagementSystem
 
         }
 
+        private void createProgram(int id, string name, string description)
+        {
+            var program = new Programs // create variables || 
+            {
+                ProgramId = id,
+                ProgramName = name,
+                Description = description,
+                //DateAdded = DateTime.Now,
+                //AddedBy = "Admin"
+            };
 
+            textBoxId.Text = program.ProgramId.ToString();
+            textBoxName.Text = program.ProgramName;
+            textBoxEmail.Text = program.Description;
+
+            //labelAddedInformation.Text = "Added by: " + student.AddedBy + " " + student.DateAdded;
+            //labelAddedInformation.Text = $"Added by: {student.AddedBy} {student.DateAdded}"; //proper outputting
+
+        }
     }
 }
