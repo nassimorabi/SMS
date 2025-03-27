@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81 d17.13
+VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrabiStudentManagementSystem.App", "StudentManagementSystem\OrabiStudentManagementSystem.App.csproj", "{918EF1AA-B791-44B4-ABA1-D95AD1A2DE74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrabiSMSApp", "StudentManagementSystem\OrabiSMSApp.csproj", "{918EF1AA-B791-44B4-ABA1-D95AD1A2DE74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Domain", "SMS.Domain\SMS.Domain.csproj", "{13C09EC0-45AD-4C76-9D92-FB82ECE6727F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Infrastructure", "SMS.Infrastructure\SMS.Infrastructure.csproj", "{231AB00D-AF96-41CD-8F5F-0F712BE0CA89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{13C09EC0-45AD-4C76-9D92-FB82ECE6727F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13C09EC0-45AD-4C76-9D92-FB82ECE6727F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13C09EC0-45AD-4C76-9D92-FB82ECE6727F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{231AB00D-AF96-41CD-8F5F-0F712BE0CA89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231AB00D-AF96-41CD-8F5F-0F712BE0CA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231AB00D-AF96-41CD-8F5F-0F712BE0CA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231AB00D-AF96-41CD-8F5F-0F712BE0CA89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

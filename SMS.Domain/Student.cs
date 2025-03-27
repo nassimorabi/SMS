@@ -10,7 +10,7 @@ namespace SMS.Domain
         
         public string StudentName { get; set; } 
 
-        public string? StudentEmail { get; set; } // "?" makes the variable nullable
+        public string? StudentEmail { get; set; } // ? makes the variable nullable
 
         [ForeignKey("ProgramID")] // a primary key that's from a different class || [ForeignKey("ProgramID")] public int ProgramId { get; set; }
         public int ProgramId { get; set; }
